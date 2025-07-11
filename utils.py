@@ -33,7 +33,7 @@ def calculer_indicateurs(data: pd.DataFrame) -> pd.DataFrame:
 
     #Ancienneté
     mois=365.25/30
-    data["Anciennete"]=data["Age"]/mois
+    data["Ancienneté"]=data["Age"]/mois
 
         # Liste des colonnes de volume par mois
     vol_novembre = [col for col in data.columns if col.startswith('N') and col.endswith('_Vol')]
@@ -204,7 +204,7 @@ def calculer_indicateurs(data: pd.DataFrame) -> pd.DataFrame:
 
     # Sélectionnez les colonnes d'indicateurs que vous souhaitez retourner
 
-    colonnes_1 = ['ID_CLIENTS','Anciennete',
+    colonnes_1 = ['ID_CLIENTS','Ancienneté',
     'nbre_types_utilises', 'CV_vol', 'RFM_Recence_Num', 'RFM_Frequence',
     'RFM_Montant', 'tendance_ratio_dc',  
     'tendance_valeur', 'tendance_volume','tendance_credit','tendance_debit',
